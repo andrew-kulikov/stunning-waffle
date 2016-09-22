@@ -25,7 +25,11 @@ int main() {
 	cout << "Enter 2 to choose f(x)=x^2" << endl;
 	cout << "Enter 3 to choose f(x)=x/3" << endl;
 	cin >> N;
-	switch(N) {
+	if (N != 1 || 2 || 3 ) {
+		exit(0);
+    }
+	else {
+	       switch(N) {
 		case 1: f = 2*x; break;
 		case 2: f = pow(x,2); break;
 		case 3: f = x/3; break;
@@ -34,6 +38,7 @@ int main() {
 	cout << "f(x)= " << f << endl;
 	float y = a*pow(sin(pow(f,2)-1),3) + c*log(abs(x)) + exp(x);
 	cout << y;
+	}
 	getch();
 	return 0;
 }

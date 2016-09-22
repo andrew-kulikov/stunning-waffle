@@ -98,3 +98,10 @@ __recovery/
 *.exe
 *.out
 *.app
+
+# Embracadero projects 
+*.cbproj
+*.ilc
+*.ild
+*.ilf
+*.ils
