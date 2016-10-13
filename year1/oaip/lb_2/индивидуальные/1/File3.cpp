@@ -25,11 +25,11 @@ int main() {
 	cout << "Enter 2 to choose f(x)=x^2" << endl;
 	cout << "Enter 3 to choose f(x)=x/3" << endl;
 	cin >> N;
-	if (N != 1 || 2 || 3 ) {
+	if (N < 1 || N > 3 ) {
 		exit(0);
-    }
+	}
 	else {
-	       switch(N) {
+	switch(N) {
 		case 1: f = 2*x; break;
 		case 2: f = pow(x,2); break;
 		case 3: f = x/3; break;

@@ -1,0 +1,108 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{D0901D9F-4BFC-4162-9098-58E5ECA0521F}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="общее\Common.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Инд_1\Индивидуальное 1.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Инд_2\Индивидуальное 2.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Инд_3\Индивидуальное 3.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="дополнительное\Дополнительное .cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="дополнительное1\rad\v1\Дополнительное1.cbproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="дополнительное1\rad\v2\Дополнительное1в1.cbproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="Common">
+			<MSBuild Projects="общее\Common.cbproj"/>
+		</Target>
+		<Target Name="Common:Clean">
+			<MSBuild Projects="общее\Common.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Common:Make">
+			<MSBuild Projects="общее\Common.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Индивидуальное 1">
+			<MSBuild Projects="Инд_1\Индивидуальное 1.cbproj"/>
+		</Target>
+		<Target Name="Индивидуальное 1:Clean">
+			<MSBuild Projects="Инд_1\Индивидуальное 1.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Индивидуальное 1:Make">
+			<MSBuild Projects="Инд_1\Индивидуальное 1.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Индивидуальное 2">
+			<MSBuild Projects="Инд_2\Индивидуальное 2.cbproj"/>
+		</Target>
+		<Target Name="Индивидуальное 2:Clean">
+			<MSBuild Projects="Инд_2\Индивидуальное 2.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Индивидуальное 2:Make">
+			<MSBuild Projects="Инд_2\Индивидуальное 2.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Индивидуальное 3">
+			<MSBuild Projects="Инд_3\Индивидуальное 3.cbproj"/>
+		</Target>
+		<Target Name="Индивидуальное 3:Clean">
+			<MSBuild Projects="Инд_3\Индивидуальное 3.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Индивидуальное 3:Make">
+			<MSBuild Projects="Инд_3\Индивидуальное 3.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Дополнительное ">
+			<MSBuild Projects="дополнительное\Дополнительное .cbproj"/>
+		</Target>
+		<Target Name="Дополнительное :Clean">
+			<MSBuild Projects="дополнительное\Дополнительное .cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Дополнительное :Make">
+			<MSBuild Projects="дополнительное\Дополнительное .cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Дополнительное1">
+			<MSBuild Projects="дополнительное1\rad\v1\Дополнительное1.cbproj"/>
+		</Target>
+		<Target Name="Дополнительное1:Clean">
+			<MSBuild Projects="дополнительное1\rad\v1\Дополнительное1.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Дополнительное1:Make">
+			<MSBuild Projects="дополнительное1\rad\v1\Дополнительное1.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Дополнительное1в1">
+			<MSBuild Projects="дополнительное1\rad\v2\Дополнительное1в1.cbproj"/>
+		</Target>
+		<Target Name="Дополнительное1в1:Clean">
+			<MSBuild Projects="дополнительное1\rad\v2\Дополнительное1в1.cbproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Дополнительное1в1:Make">
+			<MSBuild Projects="дополнительное1\rad\v2\Дополнительное1в1.cbproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="Common;Индивидуальное 1;Индивидуальное 2;Индивидуальное 3;Дополнительное ;Дополнительное1;Дополнительное1в1"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="Common:Clean;Индивидуальное 1:Clean;Индивидуальное 2:Clean;Индивидуальное 3:Clean;Дополнительное :Clean;Дополнительное1:Clean;Дополнительное1в1:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="Common:Make;Индивидуальное 1:Make;Индивидуальное 2:Make;Индивидуальное 3:Make;Дополнительное :Make;Дополнительное1:Make;Дополнительное1в1:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

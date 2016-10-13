@@ -150,7 +150,7 @@ int main()
 		D5 = pow(q / 2, 2) + pow(p / 3, 3);
 		k = -q*0.5 + sqrt(D5);
 		n = -q*0.5 - sqrt(D5);
-		cout << k << "\n" << n;
+		cout << k << "\n" << n << endl;
 		if (D5<0) {
 			cout << "There are no rational roots" << endl;
 			getch();

@@ -11,7 +11,7 @@ int main() {
 	cout << "y= ";
 	cin >> y;
 	if (y > 2*x) {
-		s = sin(x)/cos(x) + pow(x,2);
+		s = tan(x) + pow(x,2);
 		cout << "y > 2x, s=" << s << endl;
 	}
 	else if (y < 2*x) {
